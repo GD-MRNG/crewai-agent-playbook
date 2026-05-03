@@ -60,6 +60,17 @@ DISCORD_WEBHOOK_URL=      # required Phase 3+
 
 Copy `.env.example` to `.env` and fill in the keys.
 
+## Tracing
+
+CrewAI tracing is enabled via `CREWAI_TRACING_ENABLED=true` in `.env`. It captures agent decisions, task timelines, tool usage, LLM calls, tokens, and costs.
+
+Setup (one-time):
+```bash
+crewai login
+```
+
+Then set `CREWAI_TRACING_ENABLED=true` in `.env` and view traces at [app.crewai.com](https://app.crewai.com) → Traces tab.
+
 ## Build / Commit Discipline
 
 Each phase is one commit, committed only after the crew runs successfully and produces correct output. Verify phase-specific acceptance criteria (see `temp/plan.md`) before committing.

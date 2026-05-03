@@ -43,7 +43,19 @@ PYTHONUTF8=1              # prevents emoji encoding errors on Windows
 OPENAI_API_KEY=           # all phases
 SERPER_API_KEY=           # Phase 2+
 DISCORD_WEBHOOK_URL=      # Phase 3+
+CREWAI_TRACING_ENABLED=true  # optional — requires crewai login
 ```
+
+## Tracing
+
+CrewAI can capture agent decisions, task timelines, tool usage, LLM calls, tokens, and costs via the [CrewAI AMP](https://app.crewai.com) platform.
+
+```bash
+# One-time authentication
+crewai login
+```
+
+Then set `CREWAI_TRACING_ENABLED=true` in `.env`. Traces appear under the **Traces** tab at [app.crewai.com](https://app.crewai.com).
 
 ## Structure
 
